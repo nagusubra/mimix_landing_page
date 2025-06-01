@@ -1,13 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Disable SWC in favor of Babel
   swcMinify: false,
-  compiler: {
-    // Disable SWC compiler
-    emotion: false,
-    reactRemoveProperties: false,
-    removeConsole: false,
-    styledComponents: false
+  webpack: (config, { isServer }) => {
+    // Disable SWC loader
+    config.module.rules.forEach((rule) => {
+      if (rule.oneOf) {
+        rule.oneOf.forEach((r) => {
+          if (r.use && r.use.loader === 'next-swc-loader') {
+            r.use = {
+              loader: 'babel-loader',
+              options: {
+                cacheDirectory: true,
+              },
+            };
+          }
+        });
+      }
+    });
+    return config;
   }
 };
 
