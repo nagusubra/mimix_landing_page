@@ -2,9 +2,16 @@
 const nextConfig = {
   // Configuration options
   eslint: {
-    // Only run ESLint on build in production
     ignoreDuringBuilds: false,
   },
+  images: {
+    domains: ['images.pexels.com'],
+  },
+  // Ensure output is optimized
+  output: 'standalone',
+  // Improve production performance
+  poweredByHeader: false,
+  reactStrictMode: true,
 };
 
 export default nextConfig;
