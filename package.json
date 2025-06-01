@@ -11,7 +11,7 @@
   "dependencies": {
     "@radix-ui/react-form": "^0.1.7",
     "@radix-ui/react-navigation-menu": "^1.1.4",
-    "@supabase/ssr": "^0.0.10",
+    "@supabase/ssr": "^0.6.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
