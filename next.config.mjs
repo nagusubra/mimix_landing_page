@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Add your Next.js configuration options here
-  plugins: ["@tailwindcss/postcss"],
+  // Configuration options
+  eslint: {
+    // Only run ESLint on build in production
+    ignoreDuringBuilds: false,
+  },
 };
 
 export default nextConfig;
