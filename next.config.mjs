@@ -13,6 +13,7 @@ const nextConfig = {
     turbotrace: {
       logLevel: "error",
       contextDirectory: __dirname,
+      forceSwcTransforms: false,
     }
   }
 };
