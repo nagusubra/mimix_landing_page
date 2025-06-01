@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Use esbuild for minification instead of SWC or Terser
-  swcMinify: false,
+  swcMinify: true,
   experimental: {
     // Enable the built-in esbuild configuration
     turbotrace: {
