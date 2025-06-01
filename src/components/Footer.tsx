@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Instagram, Linkedin, Twitter } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -38,8 +39,22 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-gray/10 text-center text-gray">
-          <p>&copy; {new Date().getFullYear()} Mimix. All rights reserved.</p>
+        
+        <div className="mt-12 pt-8 border-t border-gray/10">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <p className="text-gray">&copy; {new Date().getFullYear()} Mimix. All rights reserved.</p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link href="https://instagram.com/mimixai" className="text-gray hover:text-primary">
+                <Instagram className="w-5 h-5" />
+              </Link>
+              <Link href="https://twitter.com/mimixai" className="text-gray hover:text-primary">
+                <Twitter className="w-5 h-5" />
+              </Link>
+              <Link href="https://linkedin.com/company/mimixai" className="text-gray hover:text-primary">
+                <Linkedin className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
