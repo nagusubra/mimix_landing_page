@@ -5,10 +5,13 @@ const nextConfig = {
     ignoreDuringBuilds: false,
   },
   images: {
-    domains: ['images.pexels.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com'
+      }
+    ]
   },
-  // Ensure output is optimized
-  output: 'standalone',
   // Improve production performance
   poweredByHeader: false,
   reactStrictMode: true,
