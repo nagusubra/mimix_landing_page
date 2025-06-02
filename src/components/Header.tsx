@@ -8,11 +8,12 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/mimix_logo_png.png"
+              src="/mimix_logo_jpg.jpg"
               alt="Mimix Logo"
               width={120}
               height={40}
               className="h-8 w-auto"
+              priority
             />
           </Link>
           
