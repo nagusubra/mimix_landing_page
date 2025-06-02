@@ -1,7 +1,14 @@
 import Link from 'next/link'
 import { Instagram, Linkedin, Twitter } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 export default function Footer() {
+  const [year, setYear] = useState("")
+
+  useEffect(() => {
+    setYear(new Date().getFullYear().toString())
+  }, [])
+
   return (
     <footer className="bg-background py-12">
       <div className="container mx-auto px-6">
@@ -42,7 +49,7 @@ export default function Footer() {
         
         <div className="mt-12 pt-8 border-t border-gray/10">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <p className="text-gray">&copy; {new Date().getFullYear()} Mimix. All rights reserved.</p>
+            <p className="text-gray">&copy; {year} Mimix. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="https://instagram.com/mimixai" className="text-gray hover:text-primary">
                 <Instagram className="w-5 h-5" />
