@@ -13,6 +13,16 @@ export default function Home() {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8 flex justify-center">
+              <Image
+                src="/mimix_synth_heads_logo_transparent_background_png copy.png"
+                alt="Mimix Synthetic Heads"
+                width={200}
+                height={200}
+                className="w-auto h-32 md:h-40"
+                priority
+              />
+            </div>
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-balance">
               Mimix your audience.
               <br />
